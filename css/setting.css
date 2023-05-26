@@ -16,7 +16,6 @@ a{text-decoration: none; color: #333;}
 img{display: block; width: 100%; overflow: hidden;}
 em, strong, i, b{font-style: normal; font-weight: normal;}
 button, input, textarea{border:none; outline: 0; background: none; font-family: 'GmarketSansMedium', sans-serif; font-size: 16px;}
-
 /* Main Root Style */
 :root{
 
