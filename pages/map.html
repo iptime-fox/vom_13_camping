@@ -49,44 +49,18 @@
   <section class="map-page">
     <div class="container">
       <div class="distance-wrapper">
-        <div class="distance-btn"><a href="#">10KM</a></div>
-        <div class="distance-btn"><a href="#">20KM</a></div>
-        <div class="distance-btn"><a href="#">30KM</a></div>
-        <div class="distance-btn"><a href="#">40KM</a></div>
-        <div class="distance-btn"><a href="#">50KM</a></div>
+        <div class="distance-btn"><a href="/panda_camping/pages/map.html?radius=10000">10KM</a></div>
+        <div class="distance-btn"><a href="/panda_camping/pages/map.html?radius=20000">20KM</a></div>
+        <div class="distance-btn"><a href="/panda_camping/pages/map.html?radius=30000">30KM</a></div>
+        <div class="distance-btn"><a href="/panda_camping/pages/map.html?radius=40000">40KM</a></div>
+        <div class="distance-btn"><a href="/panda_camping/pages/map.html?radius=50000">50KM</a></div>
         
       </div>
 
       <div class="item-wrapper">
         <div class="swiper map-swiper">
           <div class="swiper-wrapper item-slide-wrapper my-location">
-            <!-- <div class="swiper-slide ">
-              <div class="arr-wrapper">
-                <i class="ri-arrow-down-s-line"></i>
-              </div>
-              <div class="img-wrapper">
-                <img src="/panda_camping/images/camping.jpeg" alt="">
-              </div>
-              <div class="text-wrapper">
-                <p>북한산 캠핑장</p>
-                <div class="adr-wrapper">
-                  <i class="ri-map-pin-2-line"></i>
-                  <span>서울 은평구 북한산로 323-1(진광동)</span>
-                </div>
-                <div class="tel-wrapper">
-                  <i class="ri-phone-line"></i>
-                  <span>02-381-3947</span>
-                </div>
-              </div>
-              <div class="more-btn"><a href="#">상세보기</a></div>
-            </div> -->
-            
-            
-            
-            
-            
           </div>
-        
         </div>
       </div>
     </div>
@@ -108,6 +82,14 @@
 
 
     <!-- <script src="/perfume/js/etc/jquery.preloadinator.min.js"></script> -->
+
+    <script>
+      const url = document.location.href;
+      if(url === 'https://hanara123.cafe24.com/panda_camping/pages/map.html'){
+        location.href = 'https://hanara123.cafe24.com/panda_camping/pages/map.html?radius=30000'
+      }
+      
+    </script>
     
     <!-- jQuery CDN Link -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -117,5 +99,6 @@
 
     <!-- Script -->
     <script src="/panda_camping/js/main.js"></script>
+    <script src="/panda_camping/js/api.js"></script>
 </body>
 </html>

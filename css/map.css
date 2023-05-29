@@ -4,9 +4,10 @@
 header{background: var(--color-lime);}
 .map-page .container{position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: auto;}
 .map-page .distance-wrapper{display: flex; align-items: center; justify-content: center; column-gap: var(--el-small); margin-top: var(--el-medium);}
-.map-page .distance-wrapper .distance-btn{padding: 0.75rem; border-radius: 1.5rem; background: var(--color-pk);}
+.map-page .distance-wrapper .distance-btn{padding: 0.75rem; border-radius: 1.5rem; background: var(--color-pk); transition: all 0.3s;}
 .map-page .distance-wrapper .distance-btn a{color: #fff; font-size: 14px;}
-
+.map-page .distance-wrapper .distance-btn:hover{background: #fff;}
+.map-page .distance-wrapper .distance-btn:hover a{color: var(--color-pk);}
 .item-wrapper{position: fixed; bottom: var(--el-wide); width: 400px; }
 .item-wrapper .map-swiper .swiper-slide{ background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: var(--el-medium); }
 
