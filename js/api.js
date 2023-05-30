@@ -23,7 +23,7 @@ const getCampData = async () => {
           </a>
         </div>
         `;
-        campApi.innerHTML += campData;
+        campApi.insertAdjacentHTML('beforeend', campData);
       });
     })
     .catch((error) => console.log(error));
@@ -73,7 +73,7 @@ navigator.geolocation.getCurrentPosition((position) => {
               <div class="more-btn"><a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}">상세보기</a></div>
             </div> 
         `;
-          myLocation.innerHTML += myData;
+          myLocation.insertAdjacentHTML('beforeend', myData);
         });
       })
       .catch((error) => console.log(error));
@@ -135,12 +135,14 @@ const getDetailData = async () => {
               <p>캠핑장 위치 지도</p>
             </div>
             <div class="map-wrapper">
-
+              <div class="map-content">
+                <div id="map"></div>
+              </div>
             </div>
           </div>
         </div>
         `;
-        detailApi.innerHTML += detailData;
+        detailApi.insertAdjacentHTML('beforeend', detailData);
       });
     })
     .catch((error) => console.log(error));

@@ -1,0 +1,7 @@
+.wrapper .detail-page{background: #fff;}
+
+.detail-page .detail-wrapper .detail-img{width: 100%; height: 250px;}
+.detail-page .detail-wrapper .detail-img img{width: 100%; height: 100%; object-fit: cover;}
+
+.detail-page .detail-wrapper .detail-text{padding: var(--el-wide);}
+.detail-page .detail-wrapper .detail-text .detail-title{padding: 0.875rem; display: flex; align-items: center; justify-content: center; background:var(--color-gr); color: #fff;}

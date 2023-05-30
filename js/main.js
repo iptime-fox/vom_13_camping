@@ -16,7 +16,7 @@ const mapSwiper = new Swiper('.map-swiper', {
 });
 
 /*------ 페이지 이동 ------*/
-const searchMe = document.querySelector('.search-me');
-searchMe.addEventListener('click', function () {
-  Window.location = '/panda_camping/pages/map.html';
-});
+// const searchMe = document.querySelector('.search-me');
+// searchMe.addEventListener('click', function () {
+//   Window.location = '/panda_camping/pages/map.html';
+// });
