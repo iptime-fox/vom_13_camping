@@ -1,74 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panda Camping</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panda Camping</title>
 
-  <!-- Favicon Link -->
-  <link rel="shortcut icon" href="/panda_camping/images/panda-bear.png">
-  <link rel="apple-touch-icon" href="/panda_camping/images/panda-bear.png">
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" href="/panda_camping/images/panda-bear.png" />
+    <link rel="apple-touch-icon" href="/panda_camping/images/panda-bear.png" />
 
-  <!-- Remix Icon Link -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Remix Icon Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-  <!-- Font awesome Link-->
-  <script src="https://kit.fontawesome.com/2c1c2834ca.js" crossorigin="anonymous"></script>
+    <!-- Font awesome Link-->
+    <script
+      src="https://kit.fontawesome.com/2c1c2834ca.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- CSS link -->
-  <link rel="stylesheet" href="/panda_camping/css/setting.css">
-  <link rel="stylesheet" href="/panda_camping/css/main.css">
-  <link rel="stylesheet" href="/panda_camping/css/detail.css">
-</head>
-<body>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="/panda_camping/css/setting.css" />
+    <link rel="stylesheet" href="/panda_camping/css/main.css" />
+    <link rel="stylesheet" href="/panda_camping/css/detail.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="header-wrapper">
+            <ul>
+              <li class="menu">
+                <a href="#"><i class="ri-menu-line"></i></a>
+              </li>
+              <li class="logo">
+                <a href="/panda_camping/index.html">Panda Camping</a>
+              </li>
+              <li class="panda-icon">
+                <a href="/panda_camping/pages/myLocation.html"
+                  ><img
+                    src="/panda_camping/images/panda-bear.png"
+                    alt="panda-logo"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
 
-<div class="wrapper">
-
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-wrapper">
-        <ul>
-          <li class="menu"><a href="#"><i class="ri-menu-line"></i></a></li>
-          <li class="logo"><a href="/panda_camping/index.html">Panda Camping</a></li>
-          <li class="panda-icon"><a href="/panda_camping/pages/map.html"><img src="/panda_camping/images/panda-bear.png" alt="panda-logo"></a></li>
-        </ul>
-      </div>
+      <!-- Detail page -->
+      <section class="detail-page">
+        <div class="container">
+          <div class="detail-wrapper"></div>
+        </div>
+      </section>
     </div>
-  </header>
-  
-  <!-- Detail page -->
-  <section class="detail-page">
-    <div class="container">
-      <div class="detail-wrapper">
-      </div>
-    </div>
-  </section>
 
-  
-
-
-</div>
-  
-  
-  
-  
-  
-  
-  <!-- <div class="preloader js-preloader">
+    <!-- <div class="preloader js-preloader">
     <img src="/perfume/img/loader.gif" alt="">
   </div> -->
-<!-- Script -->
+    <!-- Script -->
 
+    <!-- jQuery CDN Link -->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script> -->
 
     <!-- <script src="/perfume/js/etc/jquery.preloadinator.min.js"></script> -->
     <!-- Google map Link -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8JexiAfZHPG6JCNZAIRNpohHwb1SKwgA&callback=initMap&region=kr"></script>
-    
+    <script
+      async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8JexiAfZHPG6JCNZAIRNpohHwb1SKwgA&callback=initMap&region=kr"
+    ></script>
+
     <!-- Script -->
-    <!-- <script src="/panda_camping/js/main.js"></script> -->
-    <script src="/panda_camping/js/map.js"></script>
-    <script src="/panda_camping/js/api.js"></script>
+    <script src="/panda_camping/js/detail.js"></script>
   </body>
 </html>

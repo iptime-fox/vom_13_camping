@@ -15,7 +15,7 @@ const getCampData = async () => {
       json.response.body.items.item.map((d, i) => {
         campData = `
         <div class="swiper-slide">
-          <a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}">
+          <a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}&lon=${d.mapX}&lat=${d.mapY}">
             <div class="img-wrapper">
                 <img src="${d.firstImageUrl}" alt="">
             </div>
@@ -70,7 +70,7 @@ navigator.geolocation.getCurrentPosition((position) => {
                   <span>${d.tel}</span>
                 </div>
               </div>
-              <div class="more-btn"><a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}">상세보기</a></div>
+              <div class="more-btn"><a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}&lon=${d.mapX}&lat=${d.mapY}">상세보기</a></div>
             </div> 
         `;
           myLocation.insertAdjacentHTML('beforeend', myData);
@@ -84,8 +84,13 @@ navigator.geolocation.getCurrentPosition((position) => {
 /*------ Detail page API data ------*/
 
 const detailApi = document.querySelector('.detail-wrapper');
+console.log(detailApi);
 const newURL2 = window.location.href;
-const campName = newURL2.split('=')[1];
+const campName = new URLSearchParams(location.search).get('keyword');
+const mapx = new URLSearchParams(location.search).get('lon');
+const mapy = new URLSearchParams(location.search).get('lat');
+const numMapx = Number(mapx);
+const numMapy = Number(mapy);
 
 const getDetailData = async () => {
   await fetch(
@@ -149,3 +154,39 @@ const getDetailData = async () => {
 };
 
 getDetailData();
+
+var map;
+
+function initMap() {
+  var campLocation = { lat: numMapy, lng: numMapx };
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: campLocation,
+  });
+
+  var subMarker = new google.maps.Marker({
+    position: campLocation,
+    map: map,
+    icon: {
+      url: '/panda_camping/images/panda-bear-map.png',
+    },
+  });
+}
+
+// var map2;
+
+// function initMap() {
+//   var campLocation = { lat: numMapy, lng: numMapx };
+//   map2 = new google.maps.Map(document.getElementById('my-location'), {
+//     zoom: 15,
+//     center: campLocation,
+//   });
+
+//   var subMarker = new google.maps.Marker({
+//     position: campLocation,
+//     map: map,
+//     icon: {
+//       url: '/panda_camping/images/panda-bear-map.png',
+//     },
+//   });
+// }

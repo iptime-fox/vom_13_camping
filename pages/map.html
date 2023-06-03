@@ -47,7 +47,7 @@
   
   <!-- Map page -->
   <section class="map-page">
-    <div class="container" >
+    <div class="container" id="my-location">
       <div class="distance-wrapper">
         <div class="distance-btn"><a href="/panda_camping/pages/map.html?radius=10000">10KM</a></div>
         <div class="distance-btn"><a href="/panda_camping/pages/map.html?radius=20000">20KM</a></div>
@@ -100,7 +100,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- Google map Link -->
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8JexiAfZHPG6JCNZAIRNpohHwb1SKwgA&region=kr"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8JexiAfZHPG6JCNZAIRNpohHwb1SKwgA&callback=initMap&region=kr"></script>
 
     <!-- Script -->
     <script src="/panda_camping/js/main.js"></script>

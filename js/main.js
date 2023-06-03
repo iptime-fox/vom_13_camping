@@ -7,7 +7,7 @@ const recSwiper = new Swiper('.recommended-swiper', {
   spaceBetween: 10,
 });
 
-/*------ Map page Slider ------*/
+// /*------ Map page Slider ------*/
 const mapSwiper = new Swiper('.map-swiper', {
   loop: true,
   autoplay: true,
@@ -15,8 +15,4 @@ const mapSwiper = new Swiper('.map-swiper', {
   slidesPerView: 1,
 });
 
-/*------ 페이지 이동 ------*/
-// const searchMe = document.querySelector('.search-me');
-// searchMe.addEventListener('click', function () {
-//   Window.location = '/panda_camping/pages/map.html';
-// });
+/*------  ------*/
