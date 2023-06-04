@@ -73,7 +73,7 @@ function initMap() {
   //     ),
   //     map: map,
   //     icon: {
-  //       url: "/panda_camping/images/panda-bear-map.png",
+  //       url: '/panda_camping/images/panda-bear-map.png',
   //     },
   //   });
   // }

@@ -13,7 +13,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  _justify-content: center;
+  justify-content: center;
   margin: auto;
   width: 100%;
   height: 100%;
@@ -23,7 +23,7 @@ header {
   justify-content: center;
   column-gap: var(--el-small);
   margin-top: var(--el-medium);
-  z-index: 10;
+  z-index: 1000;
 }
 .map-page .distance-wrapper .distance-btn {
   padding: 0.75rem;
