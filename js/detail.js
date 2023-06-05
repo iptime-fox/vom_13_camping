@@ -21,7 +21,7 @@ const getDetailData = async () => {
       json.response.body.items.item.map((d, i) => {
         detailData = `
         <div class="detail-img">
-          <img src="${d.firstImageUrl}" alt="">
+          <img src="${d.firstImageUrl}" alt="campsite" onerror="this.src='/panda_camping/images/onerror.png'">
         </div>
         <div class="detail-text">
           <div class="detail-keyword">

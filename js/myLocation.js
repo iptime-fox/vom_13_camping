@@ -10,6 +10,8 @@ navigator.geolocation.getCurrentPosition((position) => {
   const lat = position.coords.latitude;
   const long = position.coords.longitude;
 
+  abc(lat, long);
+
   const getMyData = async () => {
     await fetch(
       `https://apis.data.go.kr/B551011/GoCamping/locationBasedList?numOfRows=30&pageNo=1&MobileOS=ETC&MobileApp=panda_camping&serviceKey=${key}&_type=json&mapX=${long}&mapY=${lat}&radius=${radius}`
@@ -17,8 +19,6 @@ navigator.geolocation.getCurrentPosition((position) => {
       .then((response) => response.json())
       .then((json) => {
         let myData;
-        // let campListsX;
-        // let campListsY;
         json.response.body.items.item.map((d, i) => {
           myData = `
         <div class="swiper-slide my-location">
@@ -27,7 +27,7 @@ navigator.geolocation.getCurrentPosition((position) => {
               </div>
               <div class="img-wrapper">
                 <a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}">
-                  <img src="${d.firstImageUrl}" alt="">
+                  <img src="${d.firstImageUrl}" alt="campsite" onerror="this.src='/panda_camping/images/onerror.png'">
                 </a>
               </div>
               <div class="text-wrapper">
@@ -45,8 +45,6 @@ navigator.geolocation.getCurrentPosition((position) => {
             </div> 
         `;
           myLocation.insertAdjacentHTML('beforeend', myData);
-          // campListsX = `${d.mapX}`;
-          // campListsY = `${d.mapY}`;
         });
       })
       .catch((error) => console.log(error));
@@ -55,6 +53,10 @@ navigator.geolocation.getCurrentPosition((position) => {
   getMyData();
 });
 /*------ Google Map ------*/
+
+function abc(la, lo) {
+  console.log(la, lo);
+}
 
 var map;
 

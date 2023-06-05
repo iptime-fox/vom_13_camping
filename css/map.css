@@ -16,7 +16,7 @@ header {
   justify-content: center;
   margin: auto;
   width: 100%;
-  height: 100%;
+  height: auto; left: 0; top: 5rem;
 }
 .map-page .distance-wrapper {
   display: flex;
@@ -24,6 +24,7 @@ header {
   column-gap: var(--el-small);
   margin-top: var(--el-medium);
   z-index: 1000;
+  top: 0; left: 0;
 }
 .map-page .distance-wrapper .distance-btn {
   padding: 0.75rem;

@@ -6,7 +6,7 @@ const key =
 const campApi = document.querySelector('.camp-api');
 const getCampData = async () => {
   await fetch(
-    `https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=30&pageNo=1&MobileOS=ETC&MobileApp=panda%20camping&serviceKey=${key}&_type=json`
+    `https://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=50&pageNo=1&MobileOS=ETC&MobileApp=panda%20camping&serviceKey=${key}&_type=json`
   )
     .then((response) => response.json())
     .then((json) => {
@@ -17,7 +17,7 @@ const getCampData = async () => {
         <div class="swiper-slide">
           <a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}&lon=${d.mapX}&lat=${d.mapY}">
             <div class="img-wrapper">
-                <img src="${d.firstImageUrl}" alt="">
+                <img src="${d.firstImageUrl}" alt="campsite" onerror="this.src='/panda_camping/images/onerror.png'">
             </div>
             <p>${d.facltNm}</p>
           </a>
