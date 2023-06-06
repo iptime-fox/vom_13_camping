@@ -10,7 +10,7 @@ navigator.geolocation.getCurrentPosition((position) => {
   const lat = position.coords.latitude;
   const long = position.coords.longitude;
 
-  abc(lat, long);
+  initMap(lat, long);
 
   const getMyData = async () => {
     await fetch(
@@ -54,29 +54,26 @@ navigator.geolocation.getCurrentPosition((position) => {
 });
 /*------ Google Map ------*/
 
-function abc(la, lo) {
-  console.log(la, lo);
-}
+// function abc(la, lo) {
+//   console.log(la, lo);
+// }
 
 var map;
 
-function initMap() {
-  var myLocation = { lat: 37.48049694689978, lng: 127.8240705696189 };
+function initMap(la, lo) {
+  var myLocation = { lat: la, lng: lo };
   map = new google.maps.Map(document.getElementById('map-location-wrapper'), {
-    zoom: 10,
+    zoom: 12,
     center: myLocation,
   });
 
   // for (let i = 0; i < item.length; i++) {
-  //   new google.maps.Marker({
-  //     position: new google.maps.LatLng(
-  //       Number(item[i].mapY),
-  //       Number(item[i].mapX)
-  //     ),
-  //     map: map,
-  //     icon: {
-  //       url: '/panda_camping/images/panda-bear-map.png',
-  //     },
-  //   });
+  new google.maps.Marker({
+    position: new google.maps.LatLng(la, lo),
+    map: map,
+    icon: {
+      url: '/panda_camping/images/panda-bear-map.png',
+    },
+  });
   // }
 }
