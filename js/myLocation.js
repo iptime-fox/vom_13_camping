@@ -18,8 +18,10 @@ navigator.geolocation.getCurrentPosition((position) => {
     )
       .then((response) => response.json())
       .then((json) => {
+        const itemJson = json.response.body.items.item;
         let myData;
-        json.response.body.items.item.map((d, i) => {
+
+        itemJson.forEach(function (d, i) {
           myData = `
         <div class="swiper-slide my-location">
               <div class="arr-wrapper">
@@ -43,8 +45,10 @@ navigator.geolocation.getCurrentPosition((position) => {
               </div>
               <div class="more-btn"><a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}&lon=${d.mapX}&lat=${d.mapY}">상세보기</a></div>
             </div> 
-        `;
+            `;
           myLocation.insertAdjacentHTML('beforeend', myData);
+
+          mapxy(itemJson[i].mapY, itemJson[i].mapX);
         });
       })
       .catch((error) => console.log(error));
@@ -52,11 +56,8 @@ navigator.geolocation.getCurrentPosition((position) => {
 
   getMyData();
 });
-/*------ Google Map ------*/
 
-// function abc(la, lo) {
-//   console.log(la, lo);
-// }
+/*------ Google Map ------*/
 
 var map;
 
@@ -68,12 +69,21 @@ function initMap(la, lo) {
   });
 
   // for (let i = 0; i < item.length; i++) {
-  new google.maps.Marker({
-    position: new google.maps.LatLng(la, lo),
-    map: map,
-    icon: {
-      url: '/panda_camping/images/panda-bear-map.png',
-    },
-  });
+  // function mapxy(my, mx) {
+  //   new google.maps.Marker({
+  //     position: new google.maps.LatLng(my, mx),
+  //     map: map,
+  //     icon: {
+  //       url: '/panda_camping/images/panda-bear-map.png',
+  //     },
+  //   });
   // }
+  // }
+}
+function mapxy(my, mx) {
+  // for (let i = 0; i < item.length; i++) {
+  //   console.log(my[i], mx[i]);
+  // }
+  // return [my, mx];
+  console.log(my, mx);
 }

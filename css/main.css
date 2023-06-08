@@ -28,13 +28,12 @@ header{z-index: 1000;}
 .main-box .search-keyword .keyword-box{display: flex; align-items: center; justify-content: space-between;}
 .main-box .search-keyword .keyword-box .flex-box{display: flex; align-items: center; column-gap: var(--el-small);  justify-content: end;}
 .main-box .keyword-box h3{font-size: 16px; width: 85px;}
-.main-box .keyword-box input{background: #dfdfdf; padding: 0.875rem; border-radius: 0.5rem; font-size: 14px; }
-.main-box .keyword-box:nth-child(1) input{width: 70%;}
-.main-box .keyword-box:nth-child(2) input{width: 50%;}
-.main-box .keyword-box:nth-child(2) input.state{width: 30%;}
-.main-box .keyword-box:nth-child(3) .flex-box{width: 70%;}
+.main-box .keyword-box input,
+.main-box .keyword-box select{background: #dfdfdf; padding: 0.875rem; border-radius: 0.5rem; font-size: 14px; border: none; width: 38%; color: #666; font-family: 'GmarketSansMedium';}
+.main-box .keyword-box:nth-child(1) input{width: 50%;}
+.main-box .keyword-box:nth-child(2) .flex-box{width: 70%;}
 .main-box .keyword-box .submit-btn{width: 20%; background: var(--color-gr); color: #fff; cursor: pointer;}
-.main-box .keyword-box:nth-child(3) input.theme{width: 80%;}
+.main-box .keyword-box:nth-child(2) input.theme{width: 80%;}
 
 .main-box .recommended .swiper{margin: var(--el-small) 0 var(--el-wide);}
 .main-box .recommended .swiper-slide{position: relative; display: flex; align-items: center; justify-content: center; }
