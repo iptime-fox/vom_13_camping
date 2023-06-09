@@ -64,26 +64,35 @@ var map;
 function initMap(la, lo) {
   var myLocation = { lat: la, lng: lo };
   map = new google.maps.Map(document.getElementById('map-location-wrapper'), {
-    zoom: 12,
+    zoom: 10,
     center: myLocation,
   });
+}
 
-  // for (let i = 0; i < item.length; i++) {
-  // function mapxy(my, mx) {
-  //   new google.maps.Marker({
-  //     position: new google.maps.LatLng(my, mx),
-  //     map: map,
-  //     icon: {
-  //       url: '/panda_camping/images/panda-bear-map.png',
-  //     },
-  //   });
-  // }
-  // }
-}
 function mapxy(my, mx) {
-  // for (let i = 0; i < item.length; i++) {
-  //   console.log(my[i], mx[i]);
-  // }
-  // return [my, mx];
-  console.log(my, mx);
+  let arrX = new Array(mx);
+  let arrY = new Array(my);
+  for (let i = 0; i < arrX.length; i++) {
+    new google.maps.Marker({
+      position: new google.maps.LatLng(arrY[i], arrX[i]),
+      map: map,
+      icon: {
+        url: '/panda_camping/images/panda-bear-map.png',
+      },
+    });
+    // google.maps.event.addListener(
+    //   marker,
+    //   'click',
+    //   (function (marker, i) {
+    //     return function () {
+    //       //html로 표시될 인포 윈도우의 내용
+    //       infowindow.setContent(locations[i].place);
+    //       //인포윈도우가 표시될 위치
+    //       infowindow.open(map, marker);
+    //     };
+    //   })(marker, i)
+    // );
+  }
 }
+
+/*------ Google Map Detail ------*/

@@ -50,7 +50,7 @@ const getDetailData = async () => {
               <p>캠핑장 소개</p>
             </div>
             <div class="detail-info">
-              <span>${d.intro}</span>
+              <span id="intro">${d.featureNm}</span>
             </div>
           </div>
 
@@ -91,3 +91,9 @@ function initMap() {
     },
   });
 }
+
+// textarea태그값 받아오기
+var introBr = document.getElementById('intro');
+console.log(introBr.innerHTML);
+// 값에서 엔터를 <br>태그로 변경하기
+// str = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
