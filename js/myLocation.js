@@ -80,19 +80,21 @@ function mapxy(my, mx) {
         url: '/panda_camping/images/panda-bear-map.png',
       },
     });
-    // google.maps.event.addListener(
-    //   marker,
-    //   'click',
-    //   (function (marker, i) {
-    //     return function () {
-    //       //html로 표시될 인포 윈도우의 내용
-    //       infowindow.setContent(locations[i].place);
-    //       //인포윈도우가 표시될 위치
-    //       infowindow.open(map, marker);
-    //     };
-    //   })(marker, i)
-    // );
   }
 }
 
 /*------ Google Map Detail ------*/
+
+// google.maps.event.addEventListener(
+//   marker,
+//   'click',
+//   // (function (marker, i) {
+//   //   return function () {
+//   //     //html로 표시될 인포 윈도우의 내용
+//   //     infowindow.setContent(locations[i].place);
+//   //     //인포윈도우가 표시될 위치
+//   //     infowindow.open(map, marker);
+//   //   };
+//   // })(marker, i)
+//   console.log(arrY[i], arrX[i])
+// );

@@ -92,8 +92,10 @@ function initMap() {
   });
 }
 
-// textarea태그값 받아오기
-var introBr = document.getElementById('intro');
-console.log(introBr.innerHTML);
-// 값에서 엔터를 <br>태그로 변경하기
-// str = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
+// setTimeout(function () {
+//   var str = document.querySelector('#intro').innerHTML;
+//   // let strBr = str.split()
+//   // console.log(introBr);
+//   // 값에서 엔터를 <br>태그로 변경하기
+//   // str = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
+// }, 200);
