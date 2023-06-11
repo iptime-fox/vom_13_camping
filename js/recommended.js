@@ -30,3 +30,24 @@ const getCampData = async () => {
 };
 
 getCampData();
+
+/*------ Recommended Slider ------*/
+const recSwiper = new Swiper('.recommended-swiper', {
+  loop: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesPerView: 3,
+  spaceBetween: 10,
+});
+
+/*------ Keyword search ------*/
+const submitBtn = document.querySelector('.submit-btn');
+
+submitBtn.addEventListener('click', function () {
+  const keyValue = document.querySelector('.theme').value;
+  if (keyValue == '' || null || undefined) {
+    alert('키워드를 입력하세요');
+  } else {
+    location.href = `/panda_camping/pages/detail.html?keyword=${keyValue}`;
+  }
+});

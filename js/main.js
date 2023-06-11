@@ -1,24 +1,9 @@
-/*------ Recommended Slider ------*/
-const recSwiper = new Swiper('.recommended-swiper', {
-  loop: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  slidesPerView: 3,
-  spaceBetween: 10,
-});
+/*------ Header Nav ------*/
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav');
 
-/*------ Map page Slider ------*/
-const mapSwiper = new Swiper('.map-swiper', {
-  loop: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  slidesPerView: 1,
-});
-
-/*------ Keyword search ------*/
-const submitBtn = document.querySelector('.submit-btn');
-
-submitBtn.addEventListener('click', function () {
-  const keyValue = document.querySelector('.theme').value;
-  location.href = `/panda_camping/pages/detail.html?keyword=${keyValue}`;
+menu.addEventListener('click', function (e) {
+  e.preventDefault();
+  nav.classList.toggle('on');
+  document.body.style.overflow = 'hidden';
 });

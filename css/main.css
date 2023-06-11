@@ -2,7 +2,7 @@
 .main-title h2{font-size: 20px; }
 
 /* Header style*/
-header{z-index: 1000;}
+header{z-index: 1000; position: relative;}
 .header{width: 100%; padding: var(--el-small) var(--el-medium);}
 .header .header-wrapper{width: 100%;}
 .header .header-wrapper ul{display: flex; justify-content: space-between; align-items: center;width: 100%;}
@@ -11,6 +11,12 @@ header{z-index: 1000;}
 .header .header-wrapper .panda-icon{border-radius: 50%; background: var(--color-gr); width: 40px; height: 40px; position: relative;}
 .header .header-wrapper .panda-icon a{position: absolute; display: flex; align-items: center; justify-content: center; top: 50%; transform: translate(-50%, -50%); left: 50%; cursor: pointer;}
 .header .header-wrapper .panda-icon img{width: 28px; }
+
+
+header .nav{position:absolute; top: 56px; display:flex; flex-direction: column; _z-index:10000; background: var(--color-yel); left:3%; display:none;}
+header .nav a{width:40px; height:40px; display:flex; align-items: center; justify-content: center; border-top:1px solid var(--color-lime); font-size: 20px; }
+header .nav.on{display: block;}
+
 
 /* Main Page style */
 .camp-img{display: flex; align-items: center; justify-content: center; position: relative; pointer-events: none;}

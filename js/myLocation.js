@@ -98,3 +98,11 @@ function mapxy(my, mx) {
 //   // })(marker, i)
 //   console.log(arrY[i], arrX[i])
 // );
+
+/*------ Map page Slider ------*/
+const mapSwiper = new Swiper('.map-swiper', {
+  loop: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesPerView: 1,
+});
