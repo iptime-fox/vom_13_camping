@@ -38,6 +38,16 @@ const recSwiper = new Swiper('.recommended-swiper', {
   autoplaySpeed: 2000,
   slidesPerView: 3,
   spaceBetween: 10,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 5,
+    },
+    500: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
 });
 
 /*------ Keyword search ------*/
@@ -48,6 +58,12 @@ submitBtn.addEventListener('click', function () {
   if (keyValue == '' || null || undefined) {
     alert('키워드를 입력하세요');
   } else {
-    location.href = `/panda_camping/pages/detail.html?keyword=${keyValue}`;
+    location.href = `/panda_camping/pages/keyword.html?keyword=${keyValue}`;
   }
+});
+
+const searchMe = document.querySelector('.search-me');
+
+searchMe.addEventListener('click', function () {
+  location.href = '/panda_camping/pages/myLocation.html?radius=30000';
 });

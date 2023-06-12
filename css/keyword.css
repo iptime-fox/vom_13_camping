@@ -1,0 +1,4 @@
+.keyword-page{width: 100%; height: auto; background: #fff;}
+
+.keyword-page .keyword-wrapper{width: 100%; height: auto; padding: 1rem;}
+.keyword-wrapper .item-card{width: 100%; height: auto; margin-bottom: 1rem; border-bottom: 1px solid #dfdfdf; padding-bottom: 0.5rem;display: flex;}
