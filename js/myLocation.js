@@ -23,7 +23,7 @@ navigator.geolocation.getCurrentPosition((position) => {
 
         itemJson.forEach(function (d, i) {
           myData = `
-        <div class="swiper-slide my-location">
+        <div class="swiper-slide">
               <div class="arr-wrapper">
                 <i class="ri-arrow-down-s-line"></i>
               </div>
@@ -83,22 +83,6 @@ function mapxy(my, mx) {
   }
 }
 
-/*------ Google Map Detail ------*/
-
-// google.maps.event.addEventListener(
-//   marker,
-//   'click',
-//   // (function (marker, i) {
-//   //   return function () {
-//   //     //html로 표시될 인포 윈도우의 내용
-//   //     infowindow.setContent(locations[i].place);
-//   //     //인포윈도우가 표시될 위치
-//   //     infowindow.open(map, marker);
-//   //   };
-//   // })(marker, i)
-//   console.log(arrY[i], arrX[i])
-// );
-
 /*------ Map page Slider ------*/
 const mapSwiper = new Swiper('.map-swiper', {
   loop: true,
@@ -106,3 +90,13 @@ const mapSwiper = new Swiper('.map-swiper', {
   autoplaySpeed: 2000,
   slidesPerView: 1,
 });
+
+setTimeout(() => {
+  const arrowes = document.querySelector('.arr-wrapper');
+  const swiperHide = document.querySelector('.map-swiper');
+
+  arrowes.addEventListener('click', function (e) {
+    e.preventDefault();
+    swiperHide.classList.toggle('active');
+  });
+}, 5000);

@@ -102,7 +102,13 @@ header {
 }
 
 .item-wrapper .swiper-slide .arr-wrapper {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
+  display: flex; padding-top: 0.25rem;
+  align-items: center; cursor: pointer;
+  font-size: 20px; width: 100%; height: auto; justify-content: center;
 }
+
+.item-wrapper .map-swiper{height: auto;}
+.map-swiper.active .img-wrapper, 
+.map-swiper.active .text-wrapper, 
+.map-swiper.active .more-btn{display: none;}
+.map-swiper.active .arr-wrapper{padding: 0.5rem 0; background-color: var(--color-yel); border-radius: 1rem; }

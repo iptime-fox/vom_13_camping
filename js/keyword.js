@@ -39,7 +39,12 @@ const getkeywordData = async () => {
         keywordApi.insertAdjacentHTML('beforeend', keywordData);
       });
     })
-    .catch((error) => console.log(error));
+    .catch((error) => keyError());
 };
 
 getkeywordData();
+
+const keyError = () => {
+  alert('검색 결과가 없습니다.');
+  window.location.href = '/panda_camping/index.html';
+};
