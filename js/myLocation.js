@@ -24,9 +24,6 @@ navigator.geolocation.getCurrentPosition((position) => {
         itemJson.forEach(function (d, i) {
           myData = `
         <div class="swiper-slide">
-              <div class="arr-wrapper">
-                <i class="ri-arrow-down-s-line"></i>
-              </div>
               <div class="img-wrapper">
                 <a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}">
                   <img src="${d.firstImageUrl}" alt="campsite" onerror="this.src='/panda_camping/images/onerror.png'">
@@ -50,6 +47,7 @@ navigator.geolocation.getCurrentPosition((position) => {
 
           mapxy(itemJson[i].mapY, itemJson[i].mapX);
         });
+        startHide();
       })
       .catch((error) => console.log(error));
   };
@@ -91,12 +89,13 @@ const mapSwiper = new Swiper('.map-swiper', {
   slidesPerView: 1,
 });
 
-setTimeout(() => {
+function startHide() {
   const arrowes = document.querySelector('.arr-wrapper');
   const swiperHide = document.querySelector('.map-swiper');
 
   arrowes.addEventListener('click', function (e) {
     e.preventDefault();
     swiperHide.classList.toggle('active');
+    arrowes.classList.toggle('on');
   });
-}, 5000);
+}

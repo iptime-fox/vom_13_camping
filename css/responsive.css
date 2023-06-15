@@ -1,0 +1,41 @@
+@media screen and (max-width: 400px){
+  
+  /* Header Style */
+  .header{padding: 0.5rem 1rem;}
+  .header .header-wrapper .menu i{font-size: 1.125em;}
+  .header .header-wrapper .logo a{font-size: 1rem;}
+  .header .header-wrapper .panda-icon{width: 35px; height: 35px; }
+  .header .header-wrapper .panda-icon img{width: 25px;}
+
+  /* Main Page Style */
+  .camp-img img{width: 300px;}
+  .main-section .main-box{border-radius: var(--el-medium) var(--el-medium) 0 0; padding: var(--el-medium); row-gap: var(--el-medium);}
+  .main-title h2{font-size: 18px;}
+  .main-box .search-me .main-title p{font-size: 12px;}
+  .main-box .search-me .location-icon{width: 35px; height: 35px;}
+  .main-box .search-me .location-icon a{font-size: 1.25rem;}
+  .main-box .search-keyword .keyword-box .flex-box{column-gap: 0.5rem;}
+  .main-box .keyword-box h3{font-size: 16px;}
+  .main-box .keyword-box input,
+  .main-box .keyword-box select{padding: 0.5rem; border-radius: 0.5rem; font-size: 12px;}
+  .main-box .keyword-box input.theme{border: 1.5px solid #dfdfdf;}
+
+
+  /* My Location Page Style */
+  .map-page .container{top: 3rem;}
+  .map-page .distance-wrapper{column-gap: 0.5rem; margin-top: var(--el-small);}
+  .map-page .distance-wrapper .distance-btn{padding: 0.6rem; border-radius: 1.25rem; }
+  .map-page .distance-wrapper .distance-btn a {font-size: 12px;}
+
+  .item-wrapper{width: 300px;}
+  .item-wrapper .map-swiper .swiper-slide .img-wrapper img{width: 250px; height: 110px;}
+  .item-wrapper .swiper-slide,
+  .item-wrapper .swiper-slide .text-wrapper {row-gap: 0.25rem;}
+
+
+
+
+  /* Keyword Page Style */
+
+  /* Detail Page Style */
+}

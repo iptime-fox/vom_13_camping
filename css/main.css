@@ -24,7 +24,6 @@ header .nav.on{display: block;}
 
 
 .main-section .main-box{background: #fff; position: relative;  width: 100%; border-radius: var(--el-wide) var(--el-wide) 0 0; padding: var(--el-wide); display: flex; flex-direction: column; justify-content: center; row-gap: var(--el-wide); z-index: 10; }
-/* .main-box > a{padding:;} */
 .main-box .search-me{border-radius: 0.5rem; display: flex; align-items: center; justify-content: space-between; background: var(--color-yel); padding: var(--el-medium) var(--el-wide); width: 100%; }
 .main-box .search-me .main-title p{font-size: 14px;}
 .main-box .search-me .location-icon{border-radius: 50%; background: var(--color-pk); width: 40px; height: 40px; position: relative;}

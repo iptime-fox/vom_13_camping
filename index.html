@@ -26,6 +26,7 @@
   <!-- CSS link -->
   <link rel="stylesheet" href="/panda_camping/css/setting.css">
   <link rel="stylesheet" href="/panda_camping/css/main.css">
+  <link rel="stylesheet" href="/panda_camping/css/responsive.css">
 </head>
 <body>
 
@@ -109,10 +110,27 @@
 <!-- Script -->
 
     <script>
-    const url = document.location.href;
-    if(url === 'https://hanara123.cafe24.com/panda_camping/'){
-      location.href = 'https://hanara123.cafe24.com/panda_camping/index.html'
-    }
+    // const url = document.location.href;
+    // if(url === 'https://hanara123.cafe24.com/panda_camping/'){
+    //   location.href = 'https://hanara123.cafe24.com/panda_camping/index.html'
+    // }
+
+    window.onload = (event)=>{
+      
+      const userAgent = navigator.userAgent.toLowerCase();
+      let protocolName = '';
+      if(userAgent.indexOf('chrome') > -1){
+        protocolName = 'https';
+      } else {
+        protocolName = 'http';
+      } 
+
+      if(urlPath === `hanara123.cafe24.com/panda_camping/`){
+        location.href = `${protocolName}://hanara123.cafe24.com/panda_camping/index.html`;
+      }else if(urlPath === `${protocolName}://hanara123.cafe24.com/panda_camping/`){
+        location.href = `${protocolName}://hanara123.cafe24.com/panda_camping/index.html`;
+      }
+    };
     
     </script>
     <!-- <script src="/perfume/js/etc/jquery.preloadinator.min.js"></script> -->
