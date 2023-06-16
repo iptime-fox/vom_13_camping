@@ -6,6 +6,7 @@ header{z-index: 1000; position: relative;}
 .header{width: 100%; padding: var(--el-small) var(--el-medium);}
 .header .header-wrapper{width: 100%;}
 .header .header-wrapper ul{display: flex; justify-content: space-between; align-items: center;width: 100%;}
+.header .header-wrapper .menu a{display: flex; align-items: center;}
 .header .header-wrapper .menu i{font-size: var(--el-medium); color: #fff;  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); cursor: pointer;}
 .header .header-wrapper .logo a{font-size: 1.25rem; color: #fff; text-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); font-weight: 800; cursor: pointer; z-index: 1000;}
 .header .header-wrapper .panda-icon{border-radius: 50%; background: var(--color-gr); width: 40px; height: 40px; position: relative;}
@@ -32,17 +33,17 @@ header .nav.on{display: block;}
 .main-box .search-keyword{row-gap: 1rem; display: flex; flex-direction: column;}
 .main-box .search-keyword .keyword-box{display: flex; align-items: center; justify-content: space-between;}
 .main-box .search-keyword .keyword-box .flex-box{display: flex; align-items: center; column-gap: var(--el-small);  justify-content: end;}
-.main-box .keyword-box h3{font-size: 20px; _width: 85px;}
+.main-box .keyword-box h2{font-size: 20px;}
 .main-box .keyword-box input,
 .main-box .keyword-box select{background: #dfdfdf; padding: 0.875rem; border-radius: 0.5rem; font-size: 14px; border: none; width: 38%; color: #666; font-family: 'GmarketSansMedium';}
 .main-box .keyword-box .flex-box{width: 70%;}
-.main-box .keyword-box .submit-btn{width: 20%; background: var(--color-gr); color: #fff; cursor: pointer;}
+.main-box .keyword-box .submit-btn{width: 20%; background: var(--color-gr); color: #fff; cursor: pointer; appearance: none; -moz-appearance: none; -webkit-appearance: none; }
 .main-box .keyword-box input.theme{width: 80%; border: 2px solid #dfdfdf;}
 .main-box .keyword-box .theme:focus{background: #fff; color: #333;}
 
-.main-box .recommended .swiper{margin: var(--el-small) 0 var(--el-wide);}
-.main-box .recommended .swiper-slide{position: relative; display: flex; align-items: center; justify-content: center; }
-.main-box .recommended .swiper-slide p{position: absolute; z-index: 20; color: #fff; bottom: 15px; font-size: 12px; text-shadow: 0 4px 5px rgba(0, 0, 0, 0.4); text-align: start; padding: .25rem;}
-.main-box .recommended .swiper-slide .img-wrapper{border-radius: .5rem; width: 139px; height: 140px; overflow: hidden;}
+.main-box .recommended .swiper{margin: var(--el-small) 0;}
+.main-box .recommended .swiper-slide{position: relative; display: flex; align-items: center; justify-content: center; width: 33.33%; height: auto;}
+.main-box .recommended .swiper-slide p{position: absolute; z-index: 20; color: #fff; bottom: 15px; font-size: 13px; text-shadow: 0 4px 5px rgba(0, 0, 0, 0.4); text-align: start; padding: .25rem; font-weight: 600;} 
+.main-box .recommended .swiper-slide .img-wrapper{border-radius: .5rem; width: 100%; height:120px; overflow: hidden;}
 .main-box .recommended .swiper-slide img{ object-fit: cover; overflow: hidden; width: 100%; height: 100%;}
 

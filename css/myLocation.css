@@ -45,7 +45,7 @@ header {
 .item-wrapper {
   position: fixed;
   bottom: var(--el-wide);
-  width: 400px;
+  width: 380px;
   z-index: 10; 
 }
 .item-wrapper .map-swiper .swiper-slide {
@@ -73,7 +73,7 @@ header {
 }
 .item-wrapper .swiper-slide .text-wrapper {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 200;
 }
 .item-wrapper .swiper-slide .more-btn {
   width: 100%;
@@ -85,11 +85,11 @@ header {
   justify-content: center;
 }
 .item-wrapper .swiper-slide .img-wrapper {
-  padding: var(--el-small);
-  padding-top: 0;
+  padding:0 var(--el-small) 0.5rem;
+
 }
 .item-wrapper .swiper-slide .tel-wrapper {
-  padding-bottom: var(--el-small);
+  padding-bottom: 0.5rem;
 }
 .item-wrapper .swiper-slide .text-wrapper span {
   font-size: 14px;

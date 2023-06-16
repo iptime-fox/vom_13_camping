@@ -39,11 +39,11 @@ const recSwiper = new Swiper('.recommended-swiper', {
   slidesPerView: 3,
   spaceBetween: 10,
   breakpoints: {
-    320: {
+    300: {
       slidesPerView: 2,
       spaceBetween: 5,
     },
-    500: {
+    400: {
       slidesPerView: 3,
       spaceBetween: 10,
     },
