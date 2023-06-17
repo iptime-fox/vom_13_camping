@@ -110,11 +110,7 @@
 <!-- Script -->
 
     <script>
-    // const url = document.location.href;
-    // if(url === 'https://hanara123.cafe24.com/panda_camping/'){
-    //   location.href = 'https://hanara123.cafe24.com/panda_camping/index.html'
-    // }
-
+    const urlPath = document.location.href;
     window.onload = (event)=>{
       
       const userAgent = navigator.userAgent.toLowerCase();
@@ -125,7 +121,7 @@
         protocolName = 'http';
       } 
 
-      if(urlPath === `hanara123.cafe24.com/panda_camping/`){
+      if(urlPath === 'hanara123.cafe24.com/panda_camping/'){
         location.href = `${protocolName}://hanara123.cafe24.com/panda_camping/index.html`;
       }else if(urlPath === `${protocolName}://hanara123.cafe24.com/panda_camping/`){
         location.href = `${protocolName}://hanara123.cafe24.com/panda_camping/index.html`;

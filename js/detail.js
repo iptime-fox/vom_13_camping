@@ -6,10 +6,6 @@ const key =
 const detailApi = document.querySelector('.detail-wrapper');
 const newURL2 = window.location.href;
 const campName = new URLSearchParams(location.search).get('keyword');
-const mapx = new URLSearchParams(location.search).get('lon');
-const mapy = new URLSearchParams(location.search).get('lat');
-const numMapx = Number(mapx);
-const numMapy = Number(mapy);
 
 const getDetailData = async () => {
   await fetch(
@@ -55,15 +51,14 @@ const getDetailData = async () => {
           </div>
 
           <div class="detail-map">
+            <a href="/panda_camping/pages/detailMap.html?lon=${d.mapX}&lat=${d.mapY}">
             <div class="detail-title">
-              <p>캠핑장 위치 지도</p>
+              <i class="ri-map-pin-2-line"></i>
+              <p>캠핑장 위치 보기</p>
             </div>
-            <div class="map-wrapper">
-              <div class="map-content">
-                <div id="map"></div>
-              </div>
-            </div>
+            </a>
           </div>
+            
         </div>
         `;
         detailApi.insertAdjacentHTML('beforeend', detailData);
@@ -73,29 +68,3 @@ const getDetailData = async () => {
 };
 
 getDetailData();
-
-var map;
-
-function initMap() {
-  var campLocation = { lat: numMapy, lng: numMapx };
-  map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: campLocation,
-  });
-
-  var subMarker = new google.maps.Marker({
-    position: campLocation,
-    map: map,
-    icon: {
-      url: '/panda_camping/images/panda-bear-map.png',
-    },
-  });
-}
-
-// setTimeout(function () {
-//   var str = document.querySelector('#intro').innerHTML;
-//   // let strBr = str.split()
-//   // console.log(introBr);
-//   // 값에서 엔터를 <br>태그로 변경하기
-//   // str = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
-// }, 200);

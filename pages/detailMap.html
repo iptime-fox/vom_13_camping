@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1" />
+    <title>Panda Camping</title>
+
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" href="/panda_camping/images/panda-bear.png" />
+    <link rel="apple-touch-icon" href="/panda_camping/images/panda-bear.png" />
+
+    <!-- Font link -->
+
+    <!-- Remix Icon Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery CDN Link -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper Slider Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="/panda_camping/css/setting.css" />
+    <link rel="stylesheet" href="/panda_camping/css/myLocation.css" />
+    <link rel="stylesheet" href="/panda_camping/css/main.css" />
+    <link rel="stylesheet" href="/panda_camping/css/responsive.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="header-wrapper">
+            <ul>
+              <li class="menu">
+                <a href="#"><i class="ri-menu-line"></i></a>
+              </li>
+              <li class="logo">
+                <a href="/panda_camping/index.html">Panda Camping</a>
+              </li>
+              <li class="panda-icon">
+                <a href="/panda_camping/pages/myLocation.html?radius=30000"
+                  ><img
+                    src="/panda_camping/images/panda-bear.png"
+                    alt="panda-logo"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+          <div class="nav">
+            <a href="/panda_camping/index.html"><i class="ri-home-4-line"></i></a>
+            <a href="/panda_camping/pages/myLocation.html"><i class="ri-map-pin-line"></i></a>
+          </div>
+      </header>
+
+      <!-- Detail Map Box -->
+      <div id="detail-map-location">
+        <div
+          id="detail-map-location-wrapper"
+          style="width: 500px; height: 90vh; position: relative"
+        ></div>
+        
+      </div>
+
+    </div>
+
+    <!-- <div class="preloader js-preloader">
+    <img src="/perfume/img/loader.gif" alt="">
+  </div> -->
+    <!-- Script -->
+
+    <!-- <script src="/perfume/js/etc/jquery.preloadinator.min.js"></script> -->
+
+    <script>
+      const url = document.location.href;
+      if (url === "https://hanara123.cafe24.com/panda_camping/pages/map.html") {
+        location.href =
+          "https://hanara123.cafe24.com/panda_camping/pages/map.html?radius=30000";
+      }
+    </script>
+
+    <!-- jQuery CDN Link -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper Slider Link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Google map Link -->
+    <script
+    async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8JexiAfZHPG6JCNZAIRNpohHwb1SKwgA&callback=initMap&region=kr"
+    ></script>
+
+    <!-- Script -->
+    <script src="/panda_camping/js/main.js"></script>
+    <script src="/panda_camping/js/detailMap.js"></script>
+  </body>
+</html>
