@@ -27,6 +27,10 @@
   <link rel="stylesheet" href="/panda_camping/css/setting.css">
   <link rel="stylesheet" href="/panda_camping/css/main.css">
   <link rel="stylesheet" href="/panda_camping/css/responsive.css">
+
+  <style>
+    .preloader{position:fixed; background:#C7D36F; width:100%; height:100vh; left:0; top:0; z-index:9999; display:flex; align-items: center; justify-content: center;}
+  </style> 
 </head>
 <body>
 
@@ -51,7 +55,7 @@
   </header>
 
     <div class="camp-img">
-      <img src="/panda_camping/images/camp.png" alt="camp-img">
+      <img src="/panda_camping/images/camp.png" alt="camp-img"  >
     </div>
   
   <!-- Main page -->
@@ -104,9 +108,9 @@
   
   
   
-  <!-- <div class="preloader js-preloader">
-    <img src="/perfume/img/loader.gif" alt="">
-  </div> -->
+  <div class="preloader js-preloader">
+    <img src="/panda_camping/images/loading.gif" alt="loading gif" style="width:300px; height: 300px; border-radius: 50% 50%; object-fit: cover; padding: 2rem;" >
+  </div>
 <!-- Script -->
 
     <script>
@@ -129,7 +133,7 @@
     };
     
     </script>
-    <!-- <script src="/perfume/js/etc/jquery.preloadinator.min.js"></script> -->
+
     
     <!-- jQuery CDN Link -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -138,6 +142,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- Script -->
+    <script src="/panda_camping/js/jquery.preloadinator.min.js"></script>
     <script src="/panda_camping/js/main.js"></script>
     <script src="/panda_camping/js/recommended.js"></script>
 </body>

@@ -19,7 +19,7 @@ const getkeywordData = async () => {
           <div class="item-card">
             <a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}&lon=${d.mapX}&lat=${d.mapY}">
               <div class="img-wrapper">
-                <img src="${d.firstImageUrl}" alt="camp-img" onerror="this.src='/panda_camping/images/onerror.png'">
+                <img src="${d.firstImageUrl}" alt="camp-img" onerror="this.src='/panda_camping/images/panda_onerror.png'">
               </div>
             </a>
             <div class="text-wrapper">

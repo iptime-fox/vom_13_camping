@@ -64,6 +64,7 @@
   .detail-page .detail-text .detail-cate .cate-icon{font-size: 1rem;}
   .detail-page .detail-text .detail-cate span{font-size: 12px;}
   .detail-page #intro{font-size: 12px;}
+  .detail-page .detail-info{column-count: 1; column-width: auto; }
 
   .detail-page .detail-wrapper .detail-map .map-wrapper{height: 300px;}
 

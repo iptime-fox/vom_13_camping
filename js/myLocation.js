@@ -1,3 +1,16 @@
+$(function () {
+  /*------- LOADER EFFECT -------*/
+  const isPreloader = $('.preloader');
+  if (isPreloader.length > 0) {
+    // (isPreloader !== null)
+    $('.js-preloader').preloadinator({
+      minTime: 1500,
+      animation: 'fadeOut',
+      animationDuration: 400,
+    });
+  }
+});
+
 const key =
   'zrXylF6VKWHWjriRP8ACOpQfzkIFRWKROWwEgn3DtXZSQYmjf%2FkBii%2FzKwKx%2FkVAMr4skXHZlxrDZGIlyuUKrA%3D%3D';
 /*------ myLocation Slider API data ------*/
@@ -26,7 +39,7 @@ navigator.geolocation.getCurrentPosition((position) => {
         <div class="swiper-slide">
               <div class="img-wrapper">
                 <a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}">
-                  <img src="${d.firstImageUrl}" alt="campsite" onerror="this.src='/panda_camping/images/onerror.png'">
+                  <img src="${d.firstImageUrl}" alt="campsite" onerror="this.src='/panda_camping/images/panda_onerror.png'">
                 </a>
               </div>
               <div class="text-wrapper">
