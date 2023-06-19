@@ -4,7 +4,6 @@ const key =
 /*------ Keyword page API data ------*/
 
 const keywordApi = document.querySelector('.keyword-wrapper');
-// const newURL3 = window.location.href;
 const keywords = new URLSearchParams(location.search).get('keyword');
 
 const getkeywordData = async () => {

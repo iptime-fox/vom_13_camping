@@ -32,14 +32,15 @@
     />
 
     <!-- CSS link -->
+    <style>
+      .preloader{position:fixed; background:#C7D36F; width:100%; height:100vh; left:0; top:0; z-index:9999; display:flex; align-items: center; justify-content: center;}
+      .preloader img{width:300px; height: 300px; border-radius: 50% 50%; object-fit: cover; padding: 2rem;}
+    </style> 
     <link rel="stylesheet" href="/panda_camping/css/setting.css" />
     <link rel="stylesheet" href="/panda_camping/css/myLocation.css" />
     <link rel="stylesheet" href="/panda_camping/css/main.css" />
     <link rel="stylesheet" href="/panda_camping/css/responsive.css">
 
-    <style>
-      .preloader{position:fixed; background:#C7D36F; width:100%; height:100vh; left:0; top:0; z-index:9999; display:flex; align-items: center; justify-content: center;}
-    </style> 
   </head>
   <body>
     <div class="wrapper">
@@ -113,7 +114,7 @@
     </div>
 
     <div class="preloader js-preloader">
-      <img src="/panda_camping/images/loading.gif" alt="loading gif" style="width:300px; height: 300px; border-radius: 50% 50%; object-fit: cover; padding: 2rem;" >
+      <img src="/panda_camping/images/loading.gif" alt="loading-gif">
     </div>
 
     <!-- Script -->

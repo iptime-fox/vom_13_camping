@@ -1,16 +1,3 @@
-$(function () {
-  /*------- LOADER EFFECT -------*/
-  const isPreloader = $('.preloader');
-  if (isPreloader.length > 0) {
-    // (isPreloader !== null)
-    $('.js-preloader').preloadinator({
-      minTime: 1500,
-      animation: 'fadeOut',
-      animationDuration: 400,
-    });
-  }
-});
-
 const key =
   'zrXylF6VKWHWjriRP8ACOpQfzkIFRWKROWwEgn3DtXZSQYmjf%2FkBii%2FzKwKx%2FkVAMr4skXHZlxrDZGIlyuUKrA%3D%3D';
 /*------ myLocation Slider API data ------*/

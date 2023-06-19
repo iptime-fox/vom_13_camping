@@ -75,8 +75,6 @@ const nullContent = () => {
   const nullCate = document.querySelectorAll('.cateNull');
   const nullText = '데이터 없음';
   for (i = 0; i < nullCate.length; i++) {
-    console.log(nullCate[i].innerHTML);
-
     if (nullCate[i].innerHTML == '') {
       nullCate[i].insertAdjacentHTML('beforeend', nullText);
     }
