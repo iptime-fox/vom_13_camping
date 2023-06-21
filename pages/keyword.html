@@ -23,6 +23,10 @@
     ></script>
 
     <!-- CSS link -->
+    <style>
+      .preloader{position:fixed; background:#C7D36F; width:100%; height:100vh; left:0; top:0; z-index:9999; display:flex; align-items: center; justify-content: center;}
+      .preloader img{width:300px; height: 300px; border-radius: 50% 50%; object-fit: cover; padding: 2rem;}
+    </style> 
     <link rel="stylesheet" href="/panda_camping/css/setting.css" />
     <link rel="stylesheet" href="/panda_camping/css/main.css" />
     <link rel="stylesheet" href="/panda_camping/css/keyword.css" />
@@ -69,22 +73,21 @@
 
     </div>
 
-    <!-- <div class="preloader js-preloader">
-    <img src="/perfume/img/loader.gif" alt="">
-  </div> -->
+    <div class="preloader js-preloader">
+      <img src="/panda_camping/images/loading.gif" alt="loading-gif">
+    </div>
     <!-- Script -->
 
     <!-- jQuery CDN Link -->
-    <!-- <script
+    <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
-    ></script> -->
-
-    <!-- <script src="/perfume/js/etc/jquery.preloadinator.min.js"></script> -->
+    ></script>
   
 
     <!-- Script -->
+    <script src="/panda_camping/js/jquery.preloadinator.min.js"></script>
     <script src="/panda_camping/js/main.js"></script>
     <script src="/panda_camping/js/keyword.js"></script>
   </body>
