@@ -33,17 +33,18 @@ navigator.geolocation.getCurrentPosition((position) => {
                 <p>${d.facltNm}</p>
                 <div class="adr-wrapper">
                   <i class="ri-map-pin-2-line"></i>
-                  <span>${d.addr1}</span>
+                  <span class="cateNull">${d.addr1}</span>
                 </div>
                 <div class="tel-wrapper">
                   <i class="ri-phone-line"></i>
-                  <span>${d.tel}</span>
+                  <span class="cateNull">${d.tel}</span>
                 </div>
               </div>
               <div class="more-btn"><a href="/panda_camping/pages/detail.html?keyword=${d.facltNm}&lon=${d.mapX}&lat=${d.mapY}">상세보기</a></div>
             </div> 
             `;
           myLocation.insertAdjacentHTML('beforeend', myData);
+          nullContent();
 
           mapxy(itemJson[i].mapY, itemJson[i].mapX);
         });
@@ -99,3 +100,14 @@ function startHide() {
     arrowes.classList.toggle('on');
   });
 }
+
+// 데이터 null 표시
+const nullContent = () => {
+  const nullCate = document.querySelectorAll('.cateNull');
+  const nullText = '데이터 없음';
+  for (i = 0; i < nullCate.length; i++) {
+    if (nullCate[i].innerHTML == '') {
+      nullCate[i].insertAdjacentHTML('beforeend', nullText);
+    }
+  }
+};

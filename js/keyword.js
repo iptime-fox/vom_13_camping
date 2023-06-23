@@ -23,19 +23,20 @@ const getkeywordData = async () => {
             </a>
             <div class="text-wrapper">
               <h2 class="camp-name">${d.facltNm}</h2>
-              <em class="camp-info">${d.featureNm}</em>
+              <em class="camp-info keyNull">${d.featureNm}</em>
               <div class="camp-loca">
                 <i class="ri-map-pin-2-line"></i> 
-                <span>${d.addr1}</span>
+                <span class="keyNull">${d.addr1}</span>
               </div>
               <div class="camp-tel">
                 <i class="ri-phone-line"></i>
-                <span>${d.tel}</span>
+                <span class="keyNull">${d.tel}</span>
               </div>
             </div>
           </div>
         `;
         keywordApi.insertAdjacentHTML('beforeend', keywordData);
+        nullContent();
       });
     })
     .catch((error) => keyError());
@@ -46,4 +47,14 @@ getkeywordData();
 const keyError = () => {
   alert('검색 결과가 없습니다.');
   window.location.href = '/panda_camping/index.html';
+};
+
+const nullContent = () => {
+  const keyNull = document.querySelectorAll('.keyNull');
+  const nullText = '데이터 없음';
+  for (i = 0; i < keyNull.length; i++) {
+    if (keyNull[i].innerHTML == '') {
+      keyNull[i].insertAdjacentHTML('beforeend', nullText);
+    }
+  }
 };
