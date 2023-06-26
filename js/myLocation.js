@@ -2,6 +2,7 @@ const key =
   'zrXylF6VKWHWjriRP8ACOpQfzkIFRWKROWwEgn3DtXZSQYmjf%2FkBii%2FzKwKx%2FkVAMr4skXHZlxrDZGIlyuUKrA%3D%3D';
 /*------ myLocation Slider API data ------*/
 
+const loading = document.querySelector('.preloader');
 const myLocation = document.querySelector('.my-location');
 const newURL1 = window.location.href;
 const radius = newURL1.split('=')[1];
@@ -48,6 +49,9 @@ navigator.geolocation.getCurrentPosition((position) => {
 
           mapxy(itemJson[i].mapY, itemJson[i].mapX);
         });
+        loading.style.visibility = 'hidden';
+        loading.style.opacity = '0';
+        loading.style.zIndex = '-999';
         startHide();
       })
       .catch((error) => console.log(error));

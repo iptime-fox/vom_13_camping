@@ -2,7 +2,7 @@ const key =
   'zrXylF6VKWHWjriRP8ACOpQfzkIFRWKROWwEgn3DtXZSQYmjf%2FkBii%2FzKwKx%2FkVAMr4skXHZlxrDZGIlyuUKrA%3D%3D';
 
 /*------ Recommended Slider API data ------*/
-
+const loading = document.querySelector('.preloader');
 const campApi = document.querySelector('.camp-api');
 const getCampData = async () => {
   await fetch(
@@ -25,6 +25,9 @@ const getCampData = async () => {
         `;
         campApi.insertAdjacentHTML('beforeend', campData);
       });
+      loading.style.visibility = 'hidden';
+      loading.style.opacity = '0';
+      loading.style.zIndex = '-999';
     })
     .catch((error) => console.log(error));
 };

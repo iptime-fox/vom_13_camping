@@ -3,6 +3,7 @@ const key =
 
 /*------ Detail page API data ------*/
 
+const loading = document.querySelector('.preloader');
 const detailApi = document.querySelector('.detail-wrapper');
 const newURL2 = window.location.href;
 const campName = new URLSearchParams(location.search).get('keyword');
@@ -64,6 +65,9 @@ const getDetailData = async () => {
         `;
         detailApi.insertAdjacentHTML('beforeend', detailData);
         nullContent();
+        loading.style.visibility = 'hidden';
+        loading.style.opacity = '0';
+        loading.style.zIndex = '-999';
       });
     })
     .catch((error) => console.log(error));

@@ -3,6 +3,7 @@ const key =
 
 /*------ Keyword page API data ------*/
 
+const loading = document.querySelector('.preloader');
 const keywordApi = document.querySelector('.keyword-wrapper');
 const keywords = new URLSearchParams(location.search).get('keyword');
 
@@ -37,6 +38,9 @@ const getkeywordData = async () => {
         `;
         keywordApi.insertAdjacentHTML('beforeend', keywordData);
         nullContent();
+        loading.style.visibility = 'hidden';
+        loading.style.opacity = '0';
+        loading.style.zIndex = '-999';
       });
     })
     .catch((error) => keyError());

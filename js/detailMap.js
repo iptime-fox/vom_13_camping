@@ -2,6 +2,7 @@ const mapx = new URLSearchParams(location.search).get('lon');
 const mapy = new URLSearchParams(location.search).get('lat');
 const numMapx = Number(mapx);
 const numMapy = Number(mapy);
+const loading = document.querySelector('.preloader');
 
 var map;
 
@@ -22,4 +23,8 @@ function initMap() {
       url: '/panda_camping/images/panda-bear-map.png',
     },
   });
+
+  loading.style.visibility = 'hidden';
+  loading.style.opacity = '0';
+  loading.style.zIndex = '-999';
 }
