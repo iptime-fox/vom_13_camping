@@ -12,6 +12,9 @@ navigator.geolocation.getCurrentPosition((position) => {
   const long = position.coords.longitude;
 
   initMap(lat, long);
+  loading.style.visibility = 'hidden';
+  loading.style.opacity = '0';
+  loading.style.zIndex = '-999';
 
   const getMyData = async () => {
     await fetch(
@@ -49,9 +52,6 @@ navigator.geolocation.getCurrentPosition((position) => {
 
           mapxy(itemJson[i].mapY, itemJson[i].mapX);
         });
-        loading.style.visibility = 'hidden';
-        loading.style.opacity = '0';
-        loading.style.zIndex = '-999';
         startHide();
       })
       .catch((error) => console.log(error));
